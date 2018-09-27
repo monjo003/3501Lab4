@@ -12,10 +12,9 @@ public class Main {
         // Declare size of elements in order to get bin capacity 'B'
         Scanner sc = new Scanner (System.in);
 
-        // Optimal would be bin capacity = size of an element with only one element
-        System.out.println("What is the bin capacity?");
+        System.out.println("What is the bin capacity? Ex. 20");
         int binCapacity = sc.nextInt();
-        System.out.println("How many elements?");
+        System.out.println("How many elements? Ex. 5");
         int[] elements = new int[sc.nextInt()];
         System.out.println("Enter size of each element. Please give " + elements.length + " elements.");
         for (int i = 0; i < elements.length; i++){
@@ -37,9 +36,58 @@ public class Main {
         System.out.println("This is bin1: " + Arrays.toString(bin1));
         System.out.println("This is bin2: " + Arrays.toString(bin2));
         System.out.println("This is bin3: " + Arrays.toString(bin3));
-        System.out.println("This is the remainder: " + Arrays.toString(remainder));
         // Output list of unpacked items
-        // Output amount of unused space
+        System.out.println("This is the remainder: " + Arrays.toString(remainder));
+        // Output amount of unused space - Didn't get to this
+        // Would need to be using array list
+
+        /*
+        // Below is an example of optimal - Would need 3 elements all being 1's with a bin capacity of 1
+        binCapacity = 1;
+        elements[0] = 1;
+        elements[1] = 1;
+        elements[2] = 1;
+
+        remainder = new int[elements.length];
+        int[] optimal1 = new int[elements.length];
+        int[] optimal2 = new int[elements.length];
+        int[] optimal3 = new int[elements.length];
+
+        putInBins(optimal1, elements, binCapacity);
+        putInBins(optimal2, elements, binCapacity);
+        putInBins(optimal3, elements, binCapacity);
+        putInBins(remainder, elements, remainderCapacity);
+
+        // Output list of elements in each bin
+        System.out.println("This is bin1: " + Arrays.toString(optimal1));
+        System.out.println("This is bin2: " + Arrays.toString(optimal2));
+        System.out.println("This is bin3: " + Arrays.toString(optimal3));
+        // Output list of unpacked items
+        System.out.println("This is the remainder: " + Arrays.toString(remainder));
+
+        // Below is an example of nonoptimal
+        binCapacity = 5;
+        elements[0] = 3;
+        elements[1] = 3;
+        elements[2] = 3;
+
+        remainder = new int[elements.length];
+        int[] nonoptimal1 = new int[elements.length];
+        int[] nonoptimal2 = new int[elements.length];
+        int[] nonoptimal3 = new int[elements.length];
+
+        putInBins(nonoptimal1, elements, binCapacity);
+        putInBins(nonoptimal2, elements, binCapacity);
+        putInBins(nonoptimal3, elements, binCapacity);
+        putInBins(remainder, elements, remainderCapacity);
+
+        // Output list of elements in each bin
+        System.out.println("This is bin1: " + Arrays.toString(nonoptimal1));
+        System.out.println("This is bin2: " + Arrays.toString(nonoptimal2));
+        System.out.println("This is bin3: " + Arrays.toString(nonoptimal3));
+        // Output list of unpacked items
+        System.out.println("This is the remainder: " + Arrays.toString(remainder));
+        */
     }
 
     // Method for putting elements of a given array into 3 separate bins
